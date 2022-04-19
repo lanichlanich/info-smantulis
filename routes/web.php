@@ -21,4 +21,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::resource('/nilai', \App\Http\Controllers\NilaiController::class);
+Route::resource('/nilai_by_induk', \App\Http\Controllers\NilaiController::class . '@show_by_no_induk');

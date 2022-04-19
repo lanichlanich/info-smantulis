@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Nilai extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id', 'no_induk', 'nama_lengkap', 'kelas', 'nilai', 'url_file'];
 }

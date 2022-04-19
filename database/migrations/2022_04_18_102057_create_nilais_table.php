@@ -18,12 +18,8 @@ return new class extends Migration
             $table->string('no_induk')->unique();
             $table->string('nama_lengkap');
             $table->string('kelas');
-            $table->integer('nilai_1');
-            $table->integer('nilai_2');
-            $table->integer('nilai_3');
-            $table->integer('nilai_4');
-            $table->integer('nilai_5');
-            $table->integer('nilai_6');
+            $table->string('jurusan');
+            $table->integer('nilai');
             $table->string('url_file');
             $table->timestamps();
         });
