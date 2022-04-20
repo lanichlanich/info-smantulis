@@ -49,10 +49,10 @@
 
     <div class="w-full max-w-lg mx-auto mb-8">
         @forelse ($nilais as $nilai)
-            <div class="rounded-lg shadow-lg p-12 text-xs mt-8 mx-4 sm:mx-0 bg-white">
+            <div class="rounded-lg shadow-lg p-6 text-xs mt-8 mx-4 sm:mx-0 bg-white">
                 <div>
                     <div class="flex flex-col">
-                        <h1 class="text-gray-800 text-xl font-medium mb-2">{{ $nilai->nama_lengkap }}</h1>
+                        <h1 class="text-gray-800 text-xl font-medium mb-2 bg-orange-300 block">{{ $nilai->nama_lengkap }}</h1>
                         <p class="text-gray-600 text-sm">No Induk: {{ $nilai->no_induk }}</p>
                         <p class="text-gray-600 text-sm">Kelas: {{ $nilai->kelas }}</p>
                         <p class="text-gray-600 text-sm">Jurusan: {{ $nilai->jurusan }}</p>
@@ -60,74 +60,90 @@
                     <hr class="my-4">
                     <div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Pendidikan Agama & BP</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_pabp }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Pendidikan Kewarganegaraan</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_ppkn }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Bahasa Indonesia</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_bind }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Matematika</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_mtk }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Sejarah Indonesia</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_sej_indo }}</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-base">Nilai 1</span><span
-                                class="text-base font-medium">{{ $nilai->nilai }}</span>
+                            <span class="font-medium text-sm">Bahasa Inggris</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_bing }}</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-sm">Seni Budaya</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_seni }}</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-sm">PJOK</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_pjok }}</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-sm">Prakarya & Kewirausahaan</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_pkwu }}</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-sm">Bahasa Sunda</span><span
+                                class="text-base font-medium">{{ $nilai->nilai_sunda }}</span>
                         </div>
                         <hr class="my-4">
                         @if( $nilai->jurusan  == 'MIPA')
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Kimia</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Matematika Peminatan</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_mtk_geo }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Fisika</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Biologi</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_bio_sej }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Biologi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Fisika</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_fis_sos }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Matematika Peminatan</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Kimia</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_kim_eko }}</span>
                             </div>
                             <hr class="my-4">
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Sosiologi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Sosiologi</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_sos_jpn }}</span>
                             </div>
 
                         @else
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Ekonomi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Geografi</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_mtk_geo }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Geografi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Sejarah</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_bio_sej }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Sosiologi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Sosiologi</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_fis_sos }}</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Sejarah Peminatan</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Ekonomi</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_kim_eko }}</span>
                             </div>
                             <hr class="my-4">
                             <div class="flex justify-between items-center">
-                                <span class="font-medium text-base">Bahasa Jepang</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai }}</span>
+                                <span class="font-medium text-sm">Bahasa Jepang</span><span
+                                    class="text-base font-medium">{{ $nilai->nilai_sos_jpn }}</span>
                             </div>
 
                         @endif
