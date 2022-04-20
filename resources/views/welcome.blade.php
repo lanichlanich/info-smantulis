@@ -24,21 +24,29 @@
         @if (Route::has('login'))
             <div class="flex h-screen w-screen items-center justify-center">
                 @auth
-                    <a href="{{ url('/nilai') }}" class="px-8 block bg-blue-300 p-5 text-center rounded-full font-bold hover:bg-blue-400 shadow-lg">Kembali ke Dashboard</a>
+                    <div class="block"></div>
+                    <a href="{{ url('/nilai') }}"
+                        class="px-8 block bg-blue-300 p-5 text-center rounded-full font-bold hover:bg-blue-400 shadow-lg">Kembali
+                        ke Dashboard</a>
                 @else
-                    <div class="block">
+                    <div class="block mr-4">
                         <h1 class="m-5 items-center font-bold">Silahkan Login Untuk Mengakses Surat Kelulusan</h1>
                         <a href="{{ route('login') }}"
-                            class="bg-blue-300 p-5 items-center block text-center rounded-full font-bold hover:bg-blue-400 shadow-lg">Log
+                            class="bg-blue-300 p-5 items-center block text-center rounded-full font-bold hover:bg-blue-400 shadow-lg mr-4">Log
                             in</a>
-                    </div>
+                    
                     @if (Route::has('register'))
-                        {{-- <a href="{{ route('register') }}"
-                            class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a> --}}
+                            <div class="m-12 p-12"></div>
+                            <h1 class="m-5 items-center font-bold">Silahkan Buat Akun jika belum buat</h1>
+                            <a href="{{ route('register') }}"
+                                class="bg-blue-300 p-5 items-center block text-center rounded-full font-bold hover:bg-blue-400 shadow-lg">Buat
+                                Akun</a>
+                            </div>
                     @endif
-                @endauth
-            </div>
-        @endif
+                </div>
+            @endauth
+    </div>
+    @endif
     </div>
 </body>
 
