@@ -30,6 +30,6 @@ class Nilai extends Model
         'nilai_fis_sos',
         'nilai_kim_eko',
         'nilai_sos_jpn',
-        'nilai', 
+        'status',
         'url_file'];
 }
