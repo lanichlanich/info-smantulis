@@ -34,6 +34,7 @@ return new class extends Migration
             $table->integer('nilai_fis_sos');
             $table->integer('nilai_kim_eko');
             $table->integer('nilai_sos_jpn');
+            $table->string('status');
             $table->string('url_file');
             $table->timestamps();
         });
