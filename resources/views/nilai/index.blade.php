@@ -12,8 +12,10 @@
                     <div class="flex flex-col">
                         <h1 class="text-gray-800 text-xl font-semibold mb-2 bg-orange-300 block p-1">
                             {{ $nilai->nama_lengkap }}</h1>
+                        <p class="text-gray-600 text-sm">Tempat, Tanggal Lahir: {{ $nilai->tpt_lahir }},
+                            {{ $nilai->tgl_lahir }}</p>
                         <p class="text-gray-600 text-sm">No Induk: {{ $nilai->no_induk }}</p>
-                        <p class="text-gray-600 text-sm">Kelas: {{ $nilai->kelas }}</p>
+                        <p class="text-gray-600 text-sm">NISN: {{ $nilai->nisn }}</p>
                         <p class="text-gray-600 text-sm">Jurusan: {{ $nilai->jurusan }}</p>
                     </div>
                     <hr class="my-4">
@@ -79,7 +81,7 @@
                             <hr class="my-4">
                             <div class="flex justify-between items-center">
                                 <span class="font-medium text-sm">Sosiologi</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai_sos_jpn }}</span>
+                                    class="text-base font-medium">{{ $nilai->nilai_sos_jep }}</span>
                             </div>
                         @else
                             <div class="flex justify-between items-center">
@@ -101,9 +103,14 @@
                             <hr class="my-4">
                             <div class="flex justify-between items-center">
                                 <span class="font-medium text-sm">Bahasa Jepang</span><span
-                                    class="text-base font-medium">{{ $nilai->nilai_sos_jpn }}</span>
+                                    class="text-base font-medium">{{ $nilai->nilai_sos_jep }}</span>
                             </div>
                         @endif
+                        <hr class="my-4">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-sm">Rata - Rata</span><span
+                                class="text-base font-medium">{{ $nilai->rata_rata }}</span>
+                        </div>
 
                         <hr class="my-4">
                         <div class="flex flex-col">
